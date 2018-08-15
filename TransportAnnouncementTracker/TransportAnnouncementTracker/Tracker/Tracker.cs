@@ -5,10 +5,10 @@ namespace TransportAnnouncementTracker.Tracker
     public class Tracker
     {
         private IInformationReader _informationReader { get; }
-        private EventProcessor _eventProcessor { get; }
+        private IEventProcessor _eventProcessor { get; }
         private bool _IsStopped = false;
 
-        public Tracker(IInformationReader informationReader, EventProcessor eventProcessor)
+        public Tracker(IInformationReader informationReader, IEventProcessor eventProcessor)
         {
             _informationReader = informationReader;
             _eventProcessor = eventProcessor;
