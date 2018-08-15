@@ -2,8 +2,8 @@
 
 namespace TransportAnnouncementTracker.Tracker
 {
-    public interface IInformationReader
+    public interface IEventProcessor
     {
-        List<ArrivalEvent> GetArrivalEvents();
+        void Process(List<ArrivalEvent> events);
     }
 }

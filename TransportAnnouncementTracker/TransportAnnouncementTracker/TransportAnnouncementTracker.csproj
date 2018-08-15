@@ -48,9 +48,11 @@
     <Compile Include="Repository\LineRepository.cs" />
     <Compile Include="Tracker\ArrivedEvent.cs" />
     <Compile Include="Tracker\EventProcessor.cs" />
+    <Compile Include="Tracker\IEventProcessor.cs" />
     <Compile Include="Tracker\IInformationReader.cs" />
     <Compile Include="Tracker\Line.cs" />
     <Compile Include="Tracker\Tracker.cs" />
+    <Compile Include="Tracker\TrainArrived.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

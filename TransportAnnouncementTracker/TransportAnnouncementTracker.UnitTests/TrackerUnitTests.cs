@@ -20,7 +20,7 @@ namespace TransportAnnouncementTracker.UnitTests
         {
             eventProcessor = MockRepository.GenerateMock<IEventProcessor>();
             informationReader = MockRepository.GenerateMock<IInformationReader>();
-            informationReader.Stub(i => i.GetArrivalEvents()).Return(new List<ArrivedEvent>());
+            informationReader.Stub(i => i.GetArrivalEvents()).Return(new List<ArrivalEvent>());
             tracker = new Tracker.Tracker(informationReader, eventProcessor);
         }
 
@@ -31,7 +31,7 @@ namespace TransportAnnouncementTracker.UnitTests
             tracker.Stop();
             Thread.Sleep(1100);
             informationReader.AssertWasCalled(i => i.GetArrivalEvents());
-            eventProcessor.AssertWasCalled(e => e.Process(Arg<List<ArrivedEvent>>.Is.Anything));            
+            eventProcessor.AssertWasCalled(e => e.Process(Arg<List<ArrivalEvent>>.Is.Anything));            
         }
     }
 }
