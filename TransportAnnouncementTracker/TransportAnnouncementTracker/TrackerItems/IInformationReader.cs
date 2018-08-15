@@ -1,9 +1,10 @@
 ﻿using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace TransportAnnouncementTracker.TrackerItems
 {
     public interface IInformationReader
     {
-        List<ArrivalEvent> GetArrivalEvents();
+        Task<List<ArrivalEvent>> GetArrivalEvents();
     }
 }

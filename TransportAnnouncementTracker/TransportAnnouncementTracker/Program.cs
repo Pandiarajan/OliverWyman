@@ -8,6 +8,7 @@ namespace TransportAnnouncementTracker
     {
         static void Main(string[] args)
         {
+            AutoMapperConfig.Config();
             var container = UnityConfig.Config();
             var tracker = container.Resolve<Tracker>();
             tracker.Start();

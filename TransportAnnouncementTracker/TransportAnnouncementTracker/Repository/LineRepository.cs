@@ -7,9 +7,9 @@ namespace TransportAnnouncementTracker.Repository
     public class LineRepository
     {
         private List<Line> lines = new List<Line>();
-        public LineRepository()
+        public LineRepository(IEventProcessor eventProcessor)
         {
-            lines.Add(new Line("bakerloo", "Bakerloo", new TextAnnouncer()));
+            lines.Add(new Line("bakerloo", "Bakerloo", new TextAnnouncer(), eventProcessor));
         }
         public IEnumerable<Line> GetLines()
         {
