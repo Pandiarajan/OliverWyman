@@ -54,6 +54,8 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+    <None Include="Sample.json" />
+    <None Include="StopPoints.json" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\TransportAnnouncementTracker\TransportAnnouncementTracker.csproj">

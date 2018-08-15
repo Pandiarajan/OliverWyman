@@ -45,6 +45,11 @@
     <Compile Include="Announcement\IAnnouncer.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repository\LineRepository.cs" />
+    <Compile Include="Tracker\ArrivedEvent.cs" />
+    <Compile Include="Tracker\EventProcessor.cs" />
+    <Compile Include="Tracker\IInformationReader.cs" />
+    <Compile Include="Tracker\Line.cs" />
     <Compile Include="Tracker\Tracker.cs" />
   </ItemGroup>
   <ItemGroup>

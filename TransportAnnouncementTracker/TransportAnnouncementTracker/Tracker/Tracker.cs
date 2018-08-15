@@ -1,25 +1,37 @@
-﻿using System;
-using TransportAnnouncementTracker.Announcement;
+﻿using System.Threading.Tasks;
 
 namespace TransportAnnouncementTracker.Tracker
 {
     public class Tracker
     {
-        private readonly IAnnouncer _announcer;
+        private IInformationReader _informationReader { get; }
+        private EventProcessor _eventProcessor { get; }
+        private bool _IsStopped = false;
 
-        public Tracker(IAnnouncer announcer)
+        public Tracker(IInformationReader informationReader, EventProcessor eventProcessor)
         {
-            _announcer = announcer;
+            _informationReader = informationReader;
+            _eventProcessor = eventProcessor;
+        }     
+
+        public async void Start()
+        {
+            while (!_IsStopped)
+            {
+                await Task.Delay(1000);
+                _eventProcessor.Process(_informationReader.GetArrivalEvents());
+            }
         }
 
-        public void Start()
+        public bool IsRunning()
         {
-            throw new NotImplementedException();
+            return !_IsStopped;
         }
 
         public void Stop()
         {
-            throw new NotImplementedException();
+            _IsStopped = true;
         }
+
     }
 }
