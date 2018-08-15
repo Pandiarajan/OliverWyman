@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Threading;
 
-namespace TransportAnnouncementTracker.Tracker
+namespace TransportAnnouncementTracker.TrackerItems
 {
     public class EventProcessor : IEventProcessor
     {

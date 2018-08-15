@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace TransportAnnouncementTracker.Tracker
+namespace TransportAnnouncementTracker.TrackerItems
 {
     public interface IInformationReader
     {

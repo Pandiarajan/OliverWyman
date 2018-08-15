@@ -2,9 +2,7 @@
 using Rhino.Mocks;
 using System.Collections.Generic;
 using System.Threading;
-using System.Threading.Tasks;
-using TransportAnnouncementTracker.Announcement;
-using TransportAnnouncementTracker.Tracker;
+using TransportAnnouncementTracker.TrackerItems;
 
 namespace TransportAnnouncementTracker.UnitTests
 {
@@ -12,7 +10,7 @@ namespace TransportAnnouncementTracker.UnitTests
     public class TrackerUnitTests
     {
         IEventProcessor eventProcessor;
-        Tracker.Tracker tracker;
+        Tracker tracker;
         IInformationReader informationReader;
 
         [SetUp]
@@ -21,7 +19,7 @@ namespace TransportAnnouncementTracker.UnitTests
             eventProcessor = MockRepository.GenerateMock<IEventProcessor>();
             informationReader = MockRepository.GenerateMock<IInformationReader>();
             informationReader.Stub(i => i.GetArrivalEvents()).Return(new List<ArrivalEvent>());
-            tracker = new Tracker.Tracker(informationReader, eventProcessor);
+            tracker = new Tracker(informationReader, eventProcessor);
         }
 
         [Test]

@@ -1,6 +1,6 @@
 ﻿using System.Threading.Tasks;
 
-namespace TransportAnnouncementTracker.Tracker
+namespace TransportAnnouncementTracker.TrackerItems
 {
     public class Tracker
     {

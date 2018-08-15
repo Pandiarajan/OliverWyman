@@ -1,4 +1,4 @@
-﻿namespace TransportAnnouncementTracker.Tracker
+﻿namespace TransportAnnouncementTracker.TrackerItems
 {
     public class ArrivalEvent
     {
